@@ -20,9 +20,10 @@ def get_contact_display_name(contact: dict) -> str:
 def get_result(contact: dict) -> dict:
     return {
         "type": "file",
+        "uid": contact["filepath"],
+        "arg": contact["filepath"],
         "title": get_contact_display_name(contact),
         "subtitle": "View in Alfred",
-        "arg": contact["filepath"],
     }
 
 
