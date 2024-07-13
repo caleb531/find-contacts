@@ -6,6 +6,6 @@
   "resources": [
       "icon.png",
       "fc/*.py",
-      "fc/*.sql"
+      "fc/queries/*.sql"
   ]
 }

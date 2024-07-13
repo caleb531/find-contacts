@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# The core library of functions for finding contacts
+
 import functools
 import glob
 import importlib.resources
@@ -54,7 +56,7 @@ def find_contacts_in_db(
                 **{
                     prettify_column_name(key): value for key, value in dict(row).items()
                 },
-                "sourceid": os.path.expanduser(
+                "filepath": os.path.expanduser(
                     os.path.join(
                         "~",
                         "Library",
@@ -72,7 +74,7 @@ def find_contacts_in_db(
 
 
 def find_contacts(search_query: str) -> list[dict]:
-    results: list[dict] = []
+    contacts: list[dict] = []
     for sql_db_path in glob.iglob(SQL_DB_GLOB):
-        results.extend(find_contacts_in_db(sql_db_path, search_query))
-    return results
+        contacts.extend(find_contacts_in_db(sql_db_path, search_query))
+    return contacts
