@@ -28,6 +28,10 @@ def get_result(contact: dict) -> dict:
         "arg": contact["filepath"],
         "title": get_contact_display_name(contact),
         "subtitle": "View in Alfred",
+        "icon": {
+            "type": "fileicon",
+            "path": contact["filepath"],
+        },
     }
 
 
