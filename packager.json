@@ -1,0 +1,11 @@
+{
+  "export_files": [
+    "Find Contacts.alfredworkflow"
+  ],
+  "bundle_id": "com.calebevans.findcontacts",
+  "resources": [
+      "icon.png",
+      "fc/*.py",
+      "fc/*.sql"
+  ]
+}
