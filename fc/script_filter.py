@@ -11,6 +11,10 @@ import fc.core as core
 def get_contact_display_name(contact: dict) -> str:
     if contact["firstname"] and contact["lastname"]:
         return f"{contact['firstname']} {contact['lastname']}"
+    if contact["firstname"]:
+        return contact["firstname"]
+    if contact["nickname"]:
+        return contact["nickname"]
     elif contact["organization"]:
         return contact["organization"]
     else:
