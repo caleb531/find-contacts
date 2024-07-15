@@ -41,6 +41,13 @@ def convert_row_to_dict(*args: Any, **kwargs: Any) -> dict:
     return dict(sqlite3.Row(*args, **kwargs))
 
 
+# The search query is already sanitized for SQL syntax when passed to the
+# execute() call as a parameter, but we stil need to escape LIKE clause special
+# characters ('%' and '_')
+def escape_search_query(search_query: str) -> str:
+    return search_query.replace("%", "\\%").replace("_", "\\_")
+
+
 def find_contacts_in_db(
     sql_db_path: str, search_query: str
 ) -> Generator[dict, None, None]:
@@ -49,7 +56,8 @@ def find_contacts_in_db(
         con.row_factory = convert_row_to_dict
         cur = con.cursor()
         rows: list[dict] = cur.execute(
-            get_sql_query(), {"search_query_like": f"{search_query}%"}
+            get_sql_query(),
+            {"search_query_like": f"{escape_search_query(search_query)}%"},
         ).fetchall()
         return (
             {
