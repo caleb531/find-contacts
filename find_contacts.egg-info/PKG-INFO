@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: find-contacts
+Version: 1.0.0
+Summary: A CLI utility and Alfred workflow for looking up macOS contacts.
+Author-email: Caleb Evans <caleb@calebevans.me>
+Maintainer-email: Caleb Evans <caleb@calebevans.me>
+License-Expression: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Dynamic: license-file
+
+# Find Contacts
+
+*Copyright 2024 Caleb Evans*  
+*Released under the MIT license*
+
+Find Contacts is a CLI utility and Alfred workflow for looking up macOS
+contacts.

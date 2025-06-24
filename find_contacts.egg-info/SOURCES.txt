@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+fc/__init__.py
+fc/__main__.py
+fc/core.py
+fc/script_filter.py
+find_contacts.egg-info/PKG-INFO
+find_contacts.egg-info/SOURCES.txt
+find_contacts.egg-info/dependency_links.txt
+find_contacts.egg-info/top_level.txt
