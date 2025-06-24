@@ -40,7 +40,6 @@ def get_result_list(search_query: str) -> list[dict]:
 
 
 def main(query_str: str) -> None:
-
     query_str = query_str.strip()
     results = get_result_list(query_str)
     if not results:

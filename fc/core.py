@@ -73,7 +73,7 @@ def find_contacts_in_db(
                         "Sources",
                         os.path.basename(os.path.dirname(sql_db_path)),
                         "Metadata",
-                        f'{dict(row)["ZUNIQUEID"]}.abcdp',
+                        f"{dict(row)['ZUNIQUEID']}.abcdp",
                     )
                 ),
             }
