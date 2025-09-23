@@ -35,3 +35,7 @@ select = [
     # perflint
     "PERF",
 ]
+
+[tool.mypy]
+exclude = ["build"]
+disallow_untyped_defs = true
