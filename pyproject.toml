@@ -15,7 +15,7 @@ dependencies = []
 
 [dependency-groups]
 dev = [
-    "alfred-workflow-packager==3.1.1",
+    "alfred-workflow-packager==3.2.1",
     "mypy==1.10.1",
     "ruff>=0.12.0",
 ]
