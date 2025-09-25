@@ -20,3 +20,8 @@ nosetests.xml
 
 # MyPy
 .mypy_cache
+
+# Build
+build/
+dist/
+*.egg-info/
