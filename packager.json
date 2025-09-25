@@ -2,7 +2,7 @@
   "export_files": [
     "Find Contacts.alfredworkflow"
   ],
-  "bundle_id": "com.calebevans.findcontacts",
+  "bundle_id": "com.calebevans.findcontacts2",
   "resources": [
       "icon.png",
       "fc/*.py",
