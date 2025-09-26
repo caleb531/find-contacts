@@ -23,5 +23,3 @@ WHERE
         OR
         ZORGANIZATION LIKE ('%' || :search_query_like) ESCAPE '\'
     )
-    AND
-    ZSYNCSTATUS = 1
