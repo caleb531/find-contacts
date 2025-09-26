@@ -19,9 +19,9 @@ WHERE
             (ZFIRSTNAME || ' ' || ZLASTNAME) LIKE :search_query_like ESCAPE '\'
         )
         OR
-        ZNICKNAME LIKE :search_query_like ESCAPE '\'
+        ZNICKNAME LIKE ('%' || :search_query_like) ESCAPE '\'
         OR
-        ZORGANIZATION LIKE :search_query_like ESCAPE '\'
+        ZORGANIZATION LIKE ('%' || :search_query_like) ESCAPE '\'
     )
     AND
     ZSYNCSTATUS = 1
