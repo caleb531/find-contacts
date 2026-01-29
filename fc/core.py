@@ -25,7 +25,7 @@ SQL_DB_GLOB = os.path.expanduser(
 
 @functools.lru_cache()
 def get_sql_query() -> str:
-    sql_path = importlib.resources.files(__package__).joinpath(
+    sql_path = importlib.resources.files("fc").joinpath(
         os.path.join("queries", "find_contacts.sql")
     )
     with open(str(sql_path), "r") as sql_file:
