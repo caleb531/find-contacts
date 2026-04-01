@@ -1,6 +1,6 @@
 [project]
 name = "find-contacts"
-version = "1.0.0"
+version = "1.1.0"
 description = "A CLI utility and Alfred workflow for looking up macOS contacts."
 readme = "README.md"
 requires-python = ">=3.9"
