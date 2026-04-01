@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 
 # The script filter for the Alfred Workflow
-
 import json
+import os
+import os.path
 import sys
+from pathlib import Path
 
 import fc.core as core
 
@@ -21,7 +23,16 @@ def get_contact_display_name(contact: dict) -> str:
         return ""
 
 
+# Upgrading macOS Tahoe 26.4 seemingly removes the *.abcdp files, but if we we
+# recreate empty stub files with the same filenames, then it somehow restores
+# Alfred's ability to preview the contact
+def create_metadata_stub(contact_filepath: str) -> None:
+    os.makedirs(os.path.dirname(contact_filepath), exist_ok=True)
+    Path(contact_filepath).touch(exist_ok=True)
+
+
 def get_result(contact: dict) -> dict:
+    create_metadata_stub(contact["filepath"])
     return {
         "type": "file",
         "uid": contact["filepath"],
