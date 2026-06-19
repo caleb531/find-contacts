@@ -34,7 +34,6 @@ def create_metadata_stub(contact_filepath: str) -> None:
 def get_result(contact: dict) -> dict:
     create_metadata_stub(contact["filepath"])
     return {
-        "type": "file",
         "uid": contact["filepath"],
         "arg": contact["filepath"],
         "title": get_contact_display_name(contact),
