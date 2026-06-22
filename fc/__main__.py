@@ -17,6 +17,9 @@ def get_cli_args() -> argparse.Namespace:
 def main() -> None:
     cli_args = get_cli_args()
     result_list = core.find_contacts(cli_args.search_query.strip())
+
+    # Emit one formatted JSON object per contact so the CLI stays easy to pipe
+    # into tools while still being readable during manual debugging
     for result in result_list:
         print(json.dumps(result, indent=2, separators=(",", ": ")))
 
