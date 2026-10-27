@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = ">=3.9"
 
 [[package]]
@@ -39,8 +39,8 @@ dev = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "alfred-workflow-packager", specifier = "==3.2.1" },
-    { name = "ruff", specifier = ">=0.12.0" },
+    { name = "alfred-workflow-packager", specifier = ">=3.2.1" },
+    { name = "ruff", specifier = ">=0.13.1" },
     { name = "ty", specifier = ">=0.0.14" },
 ]
 
